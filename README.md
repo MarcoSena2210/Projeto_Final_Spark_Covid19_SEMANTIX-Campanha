@@ -15,7 +15,10 @@
 - Turma: Big Data Engineer 04-22
 - Professor: Rodrigo Rebouças
 
-  Creditos:Agradeço ao Cícero Henrique dos Santos
+#AcademySemantix
+
+- [Treinamento](https://github.com/MarcoSena2210/BigDataSemantix)
+
 ## Tópicos 
 
 
@@ -41,9 +44,10 @@ Para melhor compreensão e execução do projeto é necessário conhecimentos b�
 
 ## Descrição do projeto
 
-Esse projeto tem como objetivo desenvolver os conhecimentos adquiridos durante o treinamento de [Big Data Enginner](https://github.com/cicerooficial/big-data-engineer-sematix) promovido pela Semantix Inc no segundo semestre de 2021. 
+Esse projeto tem como objetivo desenvolver os conhecimentos adquiridos durante o treinamento de [Big Data Enginner](https://github.com/MarcoSena2210/big-data-engineer-sematix) promovido pela Semantix Inc no primeiro semestre de 2022. 
 
-O projeto é dividido em duas partes (básico e avançado) sobre o tema Campanha Nacional de Vacinação contra Covid-19.
+
+O projeto é dividido em duas partes (básico e avançado) sobre o tema Campanha Nacional de Vacinação contra Covid-19.Nesse momento iremos fazer o projeto básico.
 
 ⚠ **Observação: Todas as imagens de exemplo abaixo (Visualizações) são apenas para referencias, o projeto irá ter valores diferentes e as formas de se criar tabelas com dataframe/dataset das visualizações, pode ser realizado da maneira que preferir.**
 
@@ -129,3 +133,131 @@ Depois crie um arquivo de tipo PySpark chamado projeto_final_spark_nivel_basico.
 - Criar um dashboard no Elastic para visualização dos novos dados enviados
 
 ### ▶ [Projeto Final  Spark - Nivel básico](https://github.com/MarcoSena2210/Projeto_Final_Spark_Covid19_SEMANTIX-Campanha/blob/main/projeto_final_spark_nivel_basico.ipynb)
+
+
+## Comandos básicos Docker
+
+### Inicar os serviços
+         docker-compose up -d        
+
+### Verificar imagens
+          docker image ls
+
+### Verificar containers
+          docker container ls
+
+## SOLUCIONANDO PROBLEMAS 
+
+### Parar um containers
+         docker stop [nome do container]      
+
+### Parar todos containers
+         docker stop $(docker ps -a -q)
+  
+### Remover um container
+         docker rm [nome do container]
+
+### Remover todos containers
+         docker rm $(docker ps -a -q)         
+
+### Dados do containers
+         docker container inspect [nome do container]
+
+### Iniciar um container
+         docker-compose up -d [nome do container]
+
+### Iniciar todos os containers
+         docker-compose up -d 
+
+### Acessar log do container
+         docker container logs [nome do container] 
+
+
+## Acesso por shell
+
+   ##### HDFS
+
+          docker exec -it datanode bash
+
+   ##### HBase
+
+          docker exec -it hbase-master bash
+
+   ##### Sqoop
+
+          docker exec -it datanode bash
+        
+   ##### Kafka
+
+          docker exec -it kafka bash
+
+## Acesso JDBC
+
+   ##### MySQL
+          jdbc:mysql://database/employees
+
+   ##### Hive
+
+          jdbc:hive2://hive-server:10000/default
+
+   ##### Presto
+
+          jdbc:presto://presto:8080/hive/default
+
+## Usuários e senhas
+
+   ##### Hue
+    Usuário: admin
+    Senha: admin
+
+   ##### Metabase
+    Usuário: bigdata@class.com
+    Senha: bigdata123 
+
+   ##### MySQL
+    Usuário: root
+    Senha: secret
+   
+   ##### MongoDB
+    Usuário: root
+    Senha: root
+    Authentication Database: admin
+
+## Imagens   
+
+[Docker Hub](https://hub.docker.com/u/fjardim)
+
+## Acesso WebUI dos Frameworks
+ 
+* HDFS *http://localhost:50070*
+* Presto *http://localhost:8080*
+* Hbase *http://localhost:16010/master-status*
+* Mongo Express *http://localhost:8081*
+* Kafka Manager *http://localhost:9000*
+* Metabase *http://localhost:3000*
+* Nifi *http://localhost:9090*
+* Jupyter Spark *http://localhost:8889*
+* Hue *http://localhost:8888*
+* Spark *http://localhost:4040*
+
+
+## Documentação Oficial
+
+* https://zookeeper.apache.org/
+* https://kafka.apache.org/
+* https://nifi.apache.org/
+* https://prestodb.io/
+* https://spark.apache.org/
+* https://www.mongodb.com/
+* https://www.metabase.com/
+* https://jupyter.org/
+* https://hbase.apache.org/
+* https://sqoop.apache.org/
+* https://hadoop.apache.org/
+* https://hive.apache.org/
+* https://gethue.com/
+* https://github.com/yahoo/CMAK
+* https://www.docker.com/
+
+Este repositório é um fork do [fabiogjardim](https://github.com/fabiogjardim/bigdata_docker) e 
+[ciceroherique]https://github.com/cicerooficial/projeto-final-big-data-enginner-sematix)
